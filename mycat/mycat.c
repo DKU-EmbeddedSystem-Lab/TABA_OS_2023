@@ -14,19 +14,15 @@ int main(int argc, char *argv[]){
 		printf("USAGE: %s newfile\n",argv[0]);
 		exit(-1);
 	}
-	//fd = /*	[1] fill out here using system call  */;
-    fd = open(argv[1], O_RDONLY);
+	//fd = /*	TODO [1] fill out here using system call  */;
 	if (fd < 0){
 		//open error handling
 		perror("fd open error\n");
 	}
-	//while((read_size = /* [2] fall through. fill out here using syscall. */) != 0){
-	while((read_size = read(fd, buf, MAX_BUF)) != 0 ){
+	//while((read_size = /* TODO [2] fall through. fill out here using syscall. */) != 0){
         //printf("%s",buf);
-		//write_size = /* [3] fall through. fill out here using syscall. */;
-	    write_size = write(STDOUT_FILENO, buf, read_size);
+		//write_size = /* TODO [3] fall through. fill out here using syscall. */;
     }
-	/* [4] fall through. fd must be closed. */;
-    close(fd);
+	/*TODO [4] fall through. fd must be closed. */;
 }
 
