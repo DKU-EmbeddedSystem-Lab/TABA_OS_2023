@@ -9,7 +9,7 @@
 int g_count = 0; // counter (critical section)
 int g_nthd = 0; // num of threads
 int g_worker_loop_cnt = 0;
- 
+
 static void *work(void* tno); // thread routine
 
 int main(int argc, char *argv[]){
@@ -47,9 +47,10 @@ static void *work(void* cnt){
     int thd_cnt = (int)(intptr_t)cnt;
     int i;
 
-    for(i = 0; i < g_worker_loop_cnt; i++)
+    for(i = 0; i < g_worker_loop_cnt; i++){
         g_count++;
-    
+    }
+
     printf("Thread number %d: %d \n", thd_cnt, g_count);
     return NULL;
 }
